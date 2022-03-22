@@ -1,0 +1,161 @@
+@charset "utf-8";
+@import 'bulma/sass/utilities/initial-variables';
+
+// Set your brand colors
+$black: #000;
+$white: #fff;
+$light-grey-1: #f7f7f7;
+$grey-lighter: $light-grey-1;
+$light-grey-2: #ebebeb;
+$grey-light: $light-grey-2;
+$dark-grey: #444444;
+$grey-dark: $dark-grey;
+$blue: #0610b3;
+
+$primary: $dark-grey;
+
+// 42px (h1)
+$size-1: 2.625rem;
+
+// 26px (h2)
+$size-2: 1.625rem;
+
+// 16px (h3 and body copy 1)
+$size-3: 1rem;
+
+// 14px (body small 1)
+$size-4: 0.875rem;
+
+// 12px (meta)
+$size-5: 0.75rem;
+
+// Update Bulma's global variables
+$family-sans-serif: 'indivisible', -apple-system, BlinkMacSystemFont, Segoe UI,
+  Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+  sans-serif;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$body-font-size: 1rem;
+$body-line-height: 1.4;
+
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+$link: $dark-grey;
+$link-active: $blue;
+$link-active-border: $blue;
+$link-focus: $blue;
+$link-focus-border: $blue;
+$link-hover: $blue;
+$link-hover-border: $blue;
+
+$radius: 8px;
+
+// Update some of Bulma's component variables
+$container-offset: 40px;
+$section-padding: 2.5rem;
+$section-padding-desktop: 2.5rem;
+
+//Buttons
+$button-padding-vertical: 0.5rem;
+$button-background-color: transparent;
+$button-focus-box-shadow-size: 0 0 0 0;
+$button-focus-box-shadow-color: transparent;
+// Ghost Buttons
+$button-border-color: $dark-grey;
+$button-ghost-hover-color: $blue;
+$button-ghost-hover-decoration: none;
+
+// Nav bar component
+$navbar-background-color: $white;
+$navbar-item-color: $black;
+$navbar-item-hover-color: $blue;
+$navbar-item-active-color: $blue;
+$navbar-height: 6.25rem;
+$navbar-item-img-max-height: 4rem;
+$navbar-padding-horizontal: 4rem;
+
+// Footer
+$footer-padding: 2.5rem;
+$footer-background-color: $white;
+
+@import 'bulma/bulma';
+@import './typography.scss';
+
+:root {
+  --normal-weight: 400;
+  --medium-weight: 500;
+  --semibold-weight: 600;
+  --blue: #0610b3;
+  --dark-gray: #444444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  font-family: 'indivisible', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-weight: $weight-normal;
+  color: $black;
+  max-width: 1594px;
+  margin: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: $weight-medium;
+
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+li {
+  margin: 8px;
+  color: $dark-grey;
+  @include button-2-styles;
+}
+
+.button {
+  font-weight: $weight-medium;
+
+  // override primary button states
+  &.is-primary {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $blue;
+    }
+  }
+
+  //override button as link states
+  &.is-link.is-outlined {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+
+  &:active {
+    text-decoration: underline !important;
+  }
+}
+
+.navbar-item,
+.navbar-link {
+  padding: 0.5rem 1.5rem;
+}
+
+.main-wrapper {
+  min-height: calc(100vh - $navbar-height - 340px);
+}

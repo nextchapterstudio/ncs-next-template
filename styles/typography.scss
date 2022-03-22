@@ -1,0 +1,93 @@
+/* --- HEADING STYLES --- */
+
+@mixin h1-styles {
+  font-size: 2.625rem;
+  line-height: 3.15rem;
+  font-weight: var(--medium-weight);
+}
+
+@mixin h2-styles {
+  font-size: 1.625rem;
+  line-height: 1.95rem;
+  font-weight: var(--medium-weight);
+}
+
+@mixin h3-styles {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: var(--semibold-weight);
+}
+
+/* --- BODY STYLES --- */
+
+@mixin body-copy-styles {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: var(--normal-weight);
+}
+
+@mixin body-small-styles {
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  font-weight: var(--normal-weight);
+}
+
+@mixin meta-styles {
+  font-size: 0.75rem;
+  line-height: 1.05rem;
+  font-weight: var(--normal-weight);
+}
+
+/* --- BUTTON STYLES --- */
+@mixin button-1-styles {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: var(--semibold-weight);
+}
+
+@mixin button-1-underline-styles {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: var(--semibold-weight);
+  text-decoration: underline;
+}
+
+@mixin button-2-styles {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: var(--medium-weight);
+}
+
+@mixin button-2-underline-styles {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: var(--medium-weight);
+  text-decoration: underline;
+}
+
+@mixin button-3-styles {
+  font-size: 1.625rem;
+  line-height: 2.275rem;
+  font-weight: var(--medium-weight);
+}
+
+@mixin button-3-underline-styles {
+  font-size: 1.625rem;
+  line-height: 2.275rem;
+  font-weight: var(--medium-weight);
+  text-decoration: underline;
+}
+
+@mixin button-4-styles {
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  font-weight: var(--medium-weight);
+}
+
+@mixin button-4-underline-styles {
+  font-size: 0.875rem;
+  line-height: 1.225rem;
+  font-weight: var(--medium-weight);
+  text-decoration: underline;
+}
+

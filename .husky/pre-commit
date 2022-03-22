@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Running typecheck...'
+
+yarn tsc --pretty --noEmit 
+
+echo 'Running lint-staged...'
+
+yarn lint-staged
