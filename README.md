@@ -2,15 +2,16 @@
 
 This is a [Next.js](https://nextjs.org/) project
 
-To create your own project run: `yarn create next-app [new-app-name] -e https://github.com/nextchapterstudio/ncs-next-template`
+To create your own project run: 
+```bash
+`yarn create next-app [new-app-name] -e https://github.com/nextchapterstudio/ncs-next-template`
+```
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
