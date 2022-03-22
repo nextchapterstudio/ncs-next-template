@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky install",
     "lint": "eslint --ignore-path .gitignore './**/*.{ts,tsx}' --fix",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "tsc": "tsc --noEmit"
