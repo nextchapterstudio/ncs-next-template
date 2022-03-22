@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Running typecheck...'
+
+npx tsc --pretty --noEmit || 
+(
+  echo 'Fix errors and try again';
+  false;
+)
+
+echo 'Running lint-staged...'
+
+npx lint-staged
