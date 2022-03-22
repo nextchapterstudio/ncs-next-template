@@ -31,11 +31,12 @@ module.exports = {
         },
       },
     ],
-    "react/no-unescaped-entities": [
-      "error",
+    'react/no-unescaped-entities': [
+      'error',
       {
-        "forbid": [">", "}"]
-      }
-    ]
+        forbid: ['>', '}'],
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
   },
 }
