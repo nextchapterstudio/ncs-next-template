@@ -1,0 +1,23 @@
+@import '../../styles/typography.scss';
+
+.link {
+  @include button-styles-1;
+  position: relative;
+  z-index: 10;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: blue;
+  }
+
+  &:active {
+    text-decoration: underline;
+    text-decoration-style: double;
+  }
+
+  &--active {
+    text-decoration: underline;
+    text-decoration-style: double;
+  }
+}
