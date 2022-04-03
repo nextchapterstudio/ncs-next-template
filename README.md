@@ -9,9 +9,16 @@ To create your own project run:
 
 ## Getting Started
 
+This project requires Node and [Yarn 1 classic] (https://classic.yarnpkg.com/lang/en/) 
+
+```
+npm install --global yarn
+```
+
 First, run the development server:
 
 ```bash
+yarn install
 yarn dev
 ```
 
