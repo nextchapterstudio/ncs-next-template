@@ -108,6 +108,18 @@ body {
   margin: auto;
 }
 
+h1 {
+  @include h1-styles;
+}
+
+h2 {
+  @include h2-styles;
+}
+
+h3 {
+  @include h3-styles;
+}
+
 a {
   color: inherit;
   text-decoration: none;
