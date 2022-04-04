@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Hero } from '@nextchapterstudio/experience-ui'
+import cx from 'classnames'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,10 +15,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to the experience template
-        </h1>
-
+        <Hero className={cx('is-primary', 'is-medium')}>
+          <h1 className={styles.title}>Welcome to the experience template</h1>
+        </Hero>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>

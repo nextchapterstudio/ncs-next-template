@@ -1,0 +1,70 @@
+@import '../../styles/breakpoints';
+@import '../../styles/typography';
+
+.typography {
+  &--heading-1 {
+    @include h1-styles;
+  }
+
+  &--heading-1-bold {
+    @include h1-styles-bold;
+  }
+
+  &--subhead-1 {
+    @include sub-heading-1;
+  }
+
+  &--subhead-2 {
+    @include sub-heading-2;
+  }
+
+  &--subhead-3 {
+    @include sub-heading-3;
+  }
+
+  &--body-1 {
+    @include body-1-styles;
+  }
+
+  &--body-1-bold {
+    @include body-1-bold-styles;
+  }
+
+  &--body-2 {
+    @include body-2-styles;
+  }
+
+  &--body-2-bold {
+    @include body-2-bold-styles;
+  }
+
+  &--infographic {
+    @include infographic-1;
+  }
+
+  &--infographic-body {
+    @include infographic-2;
+  }
+
+  &--acid {
+    color: var(--acid);
+    background-color: var(--navy);
+  }
+
+  &--navy {
+    color: var(--navy);
+  }
+
+  &--left-margin {
+    margin-left: 40px;
+    margin-top: 0;
+  }
+
+  &--max-width {
+    max-width: 883px;
+  }
+
+  &--no-top-margin {
+    margin-top: 0;
+  }
+}
