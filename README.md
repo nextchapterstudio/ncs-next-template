@@ -55,7 +55,7 @@ This project comes with the Experience UI react component library built using BU
 
 ## Linting and Typechecking
 - [Husky](https://typicode.github.io/husky/#/) is set up to run [ESLint](https://eslint.org/) and Typechecking when you run `git push`
-- [Prettier](https://prettier.io/) is also set up for code formatting
+- [Prettier](https://prettier.io/) is also integrated with ESLint for consistent code formatting
 
 
 
