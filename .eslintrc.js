@@ -39,6 +39,7 @@ module.exports = {
         forbid: ['>', '}'],
       },
     ],
+    'react/display-name': 'error', // These errors will fail the Netlify build
     '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
   },
 }
