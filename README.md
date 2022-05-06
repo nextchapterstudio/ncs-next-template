@@ -46,3 +46,16 @@ This project comes with the Experience UI react component library built using BU
 - [Experience UI repo](https://github.com/nextchapterstudio/experience)
 - Learn about [BULMA css](https://bulma.io/) here.
 - See the components is action here: [Storybook](https://experience-ui.netlify.app)
+
+## Other Technologies Used
+
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/) using SCSS syntax
+
+## Linting and Typechecking
+- [Husky](https://typicode.github.io/husky/#/) is set up to run [ESLint](https://eslint.org/) and Typechecking when you run `git push`
+- [Prettier](https://prettier.io/) is also set up for code formatting
+
+
+
