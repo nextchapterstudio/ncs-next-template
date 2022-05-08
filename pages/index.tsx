@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Hero } from '@nextchapterstudio/experience-ui'
 import cx from 'classnames'
-import styles from '../styles/Home.module.css'
+import styles from './home.module.css'
 
 const Home: NextPage = () => {
   return (
