@@ -3,12 +3,8 @@
 
 echo 'Running typecheck...'
 
-npx tsc --pretty --noEmit || 
-(
-  echo 'Fix errors and try again';
-  false;
-)
+yarn tsc --pretty --noEmit 
 
 echo 'Running lint-staged...'
 
-npx lint-staged
+yarn lint-staged

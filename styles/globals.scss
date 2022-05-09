@@ -11,23 +11,7 @@ $grey-light: $light-grey-2;
 $dark-grey: #444444;
 $grey-dark: $dark-grey;
 $blue: #0610b3;
-
 $primary: $blue;
-
-// 42px (h1)
-$size-1: 2.625rem;
-
-// 26px (h2)
-$size-2: 1.625rem;
-
-// 16px (h3 and body copy 1)
-$size-3: 1rem;
-
-// 14px (body small 1)
-$size-4: 0.875rem;
-
-// 12px (meta)
-$size-5: 0.75rem;
 
 // Update Bulma's global variables
 $family-sans-serif: 'indivisible', -apple-system, BlinkMacSystemFont, Segoe UI,
@@ -39,21 +23,7 @@ $weight-semibold: 600;
 $body-font-size: 1rem;
 $body-line-height: 1.4;
 
-// $widescreen-enabled: false;
-// $fullhd-enabled: false;
-
-$link: $dark-grey;
-$link-active: $blue;
-$link-active-border: $blue;
-$link-focus: $blue;
-$link-focus-border: $blue;
-$link-hover: $blue;
-$link-hover-border: $blue;
-
-$radius: 8px;
-
 // Update some of Bulma's component variables
-$container-offset: 40px;
 $section-padding: 2.5rem;
 $section-padding-desktop: 2.5rem;
 
@@ -87,24 +57,37 @@ $footer-background-color: $white;
   --normal-weight: 400;
   --medium-weight: 500;
   --semibold-weight: 600;
-  --blue: #0610b3;
-  --dark-gray: #444444;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html,
 body {
   padding: 0;
+  margin: auto;
   font-family: 'indivisible', -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   font-weight: $weight-normal;
-  color: $black;
-  max-width: 1594px;
-  margin: auto;
+  font-size: 1rem;
+  line-height: 1.4;
+  // max-width: 1594px;
+}
+
+h1 {
+  @include h1-styles;
+}
+
+h2 {
+  @include h2-styles;
+}
+
+h3 {
+  @include h3-styles;
 }
 
 a {
@@ -117,45 +100,6 @@ a {
   }
 }
 
-li {
-  margin: 8px;
-  color: $dark-grey;
-  @include button-2-styles;
-}
-
-.button {
-  font-weight: $weight-medium;
-
-  // override primary button states
-  &.is-primary {
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $blue;
-    }
-  }
-
-  //override button as link states
-  &.is-link.is-outlined {
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-      border-color: $blue;
-      color: $blue;
-    }
-  }
-
-  &:active {
-    text-decoration: underline !important;
-  }
-}
-
-.navbar-item,
-.navbar-link {
-  padding: 0.5rem 1.5rem;
-}
-
-.main-wrapper {
-  min-height: calc(100vh - $navbar-height - 340px);
+ul {
+  list-style: none;
 }

@@ -5,9 +5,10 @@ module.exports = {
     es2021: true,
   },
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'sonarjs'],
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'plugin:sonarjs/recommended',
     'next/core-web-vitals',
     'prettier',
   ],
@@ -22,6 +23,7 @@ module.exports = {
   //   sourceType: 'module',
   // },
   rules: {
+    'sonarjs/no-duplicate-string': ['warn', 3],
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/ban-types': [
       'error',
@@ -37,6 +39,7 @@ module.exports = {
         forbid: ['>', '}'],
       },
     ],
+    'react/display-name': 'error', // These errors will fail the Netlify build
     '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
   },
 }
