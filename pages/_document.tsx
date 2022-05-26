@@ -1,8 +1,8 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <link rel="stylesheet" href="https://use.typekit.net/dyl1mod.css" />
         <link
@@ -29,5 +29,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }
