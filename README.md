@@ -9,7 +9,7 @@ To create your own project run:
 
 ## Getting Started
 
-This project requires Node and [Yarn 1 classic] (https://classic.yarnpkg.com/lang/en/) 
+This project requires Node and [Yarn 1 classic](https://classic.yarnpkg.com/lang/en/) 
 
 ```
 npm install --global yarn
@@ -56,6 +56,6 @@ This project comes with the Experience UI react component library built using BU
 ## Linting and Typechecking
 - [Husky](https://typicode.github.io/husky/#/) is set up to run [ESLint](https://eslint.org/) and Typechecking when you run `git push`
 - [Prettier](https://prettier.io/) is also integrated with ESLint for consistent code formatting
-
+- [JSX-A11y plugin](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) to help us write accessible code!
 
 
