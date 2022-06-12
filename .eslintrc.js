@@ -10,6 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:sonarjs/recommended',
     'next/core-web-vitals',
+    'plugin:jsx-a11y/recommended',
     'prettier',
   ],
   // Unsure if this is required
@@ -24,6 +25,8 @@ module.exports = {
   // },
   rules: {
     'sonarjs/no-duplicate-string': ['warn', 3],
+
+    '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/ban-types': [
       'error',
@@ -33,6 +36,7 @@ module.exports = {
         },
       },
     ],
+
     'react/no-unescaped-entities': [
       'error',
       {
@@ -40,6 +44,9 @@ module.exports = {
       },
     ],
     'react/display-name': 'error', // These errors will fail the Netlify build
-    '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
+
+    'jsx-a11y/anchor-is-valid': 'off', // This rule is not compatible with Next.js's <Link /> components
+    'jsx-a11y/click-events-have-key-events': 'warn',
+    'jsx-a11y/no-static-element-interactions': 'warn',
   },
 }

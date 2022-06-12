@@ -17,11 +17,16 @@ export const ActiveLink = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ href, onClick, className, children }, ref) => {
     const { asPath } = useRouter()
 
-    const activeClass = asPath == href ? 'active' : null
+    const isActive = asPath === href
+
+    const activeClass = isActive ? 'active' : null
 
     return (
       <Link href={href}>
         <a
+          aria-current={isActive}
+          role="link"
+          tabIndex={0}
           onClick={onClick}
           className={block(styles, 'link', [activeClass], className)}
           ref={ref}
