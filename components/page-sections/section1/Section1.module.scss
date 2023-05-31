@@ -1,0 +1,44 @@
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page3{
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerr{
+    overscroll-behavior: none;
+    width: 100%;
+    // display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.shape{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
