@@ -4,7 +4,7 @@
 
 .scroll_section_inner {
   height: 100vh;
-  width: 400vw;
+  width: 600vw;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -21,7 +21,7 @@
   }
 
   &_two {
-    background-color: green;
+    // background-color: green;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -30,7 +30,7 @@
   }
 
   &_three {
-    background-color: blue;
+    // background-color: blue;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -39,7 +39,23 @@
   }
 
   &_four {
-    background-color: yellow;
+    // background-color: yellow;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_five {
+    // background-color: yellow;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_six {
+    // background-color: yellow;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -61,6 +77,19 @@
     color: white;
 }
 .section_four_text{
-    font-size: 20vw;
+    font-size: 116px;
+    line-height: 120px;
     color: white;
+    max-width: 660px;
+    text-align: center;
+}
+
+.section_five_text{
+  font-size: 20vw;
+  color: white;
+}
+
+.section_six_text{
+  font-size: 20vw;
+  color: white;
 }

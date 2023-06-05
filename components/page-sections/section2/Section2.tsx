@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import cx from 'classnames'
-import styles from './ScrollSection.module.scss'
+import styles from './Section2.module.scss'
 
-function ScrollSection() {
+function Section2() {
   const sectionRef = useRef(null)
   const triggerRef = useRef(null)
 
@@ -26,7 +26,7 @@ function ScrollSection() {
           end: '2000 top',
           scrub: 0.6,
           pin: true,
-          // markers: true,
+          markers: true,
         },
       }
     )
@@ -38,7 +38,6 @@ function ScrollSection() {
         trigger: '.scroll-section2',
         start: 'top -50%',
         // markers: true,
-        scrub: 0.6,
       },
     })
 
@@ -48,9 +47,7 @@ function ScrollSection() {
       scrollTrigger: {
         trigger: '.scroll-section3',
         start: 'top -100%',
-        end: 'top -150%',
-        markers: true,
-        scrub: 0.6,
+        // markers: true,
       },
     })
 
@@ -80,26 +77,26 @@ function ScrollSection() {
           className={cx('scroll-section-inner', styles.scroll_section_inner)}
         >
           <div className={cx('scroll-section', styles.scroll_section_one)}>
-            <h1 className={cx('lorem', styles.section_one_text)}> Section 1</h1>
+            <h1 className={cx('lorem', styles.section_one_text)}> Section 4</h1>
           </div>
           <div className={cx('scroll-section2', styles.scroll_section_two)}>
             <h1 className={cx('lorem2', styles.section_two_text)}>
               {' '}
-              Section 2
+              Section 5
             </h1>
           </div>
           <div className={cx('scroll-section3', styles.scroll_section_three)}>
             <h1 className={cx('lorem3', styles.section_three_text)}>
               {' '}
-              Section 3
+              Section 6
             </h1>
           </div>
-          <div className={cx('scroll-section4', styles.scroll_section_four)}>
+          {/* <div className={cx('scroll-section4', styles.scroll_section_four)}>
             <h1 className={cx('lorem4', styles.section_four_text)}>
               {' '}
-              {/* "Each cup of tea represents an imaginary voyage" */}
+              "Each cup of tea represents an imaginary voyage"
             </h1>
-          </div>
+          </div> */}
           {/* <div className={cx('scroll-section5', styles.scroll_section_five)}>
             <h1 className={cx('lorem5', styles.section_five_text)}>
               {' '}
@@ -118,4 +115,4 @@ function ScrollSection() {
   )
 }
 
-export default ScrollSection
+export default Section2
