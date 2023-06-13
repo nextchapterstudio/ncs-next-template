@@ -11,8 +11,6 @@ function ScrollSection() {
 
   gsap.registerPlugin(ScrollTrigger)
 
- 
-
   useEffect(() => {
     const pin = gsap.fromTo(
       sectionRef.current,
@@ -22,117 +20,118 @@ function ScrollSection() {
       {
         translateX: '-300vw',
         ease: 'none',
+        duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start:'top top',
-          end:"50% left",
+          start: 'top top',
+          end: '+=3000',
           scrub: 0.6,
           pin: true,
-          // markers: true,
         },
       }
     )
 
-    const tl = gsap.timeline( { 
-   
-      scrollTrigger: {
-        trigger: "lorem2",
-        start: "20",
-        scrub: true,
-        pin: true,
-        markers: true,
-        containerAnimation: pin,
-      }
-      
-    });
-    
-    tl
-      .fromTo('.lorem2', { y:150, opacity: 0, duration: 1 },{y:0, opacity: 1, duration:1})
-      .to('.lorem2', { y:-150, opacity: 0, duration: 0.5 }, 1)
+    // const tl = gsap.timeline({
+    //   trigger:'lorem2',
+    //   start: "40% top",
+    //   end: "+=1000",
+    //   scrub:true,
+    //   markers: true,
+    //   pin:true,
+    // })
+    // tl
+    //   .fromTo('.lorem2', { y:150, opacity: 0, duration: 1 },{y:0, opacity: 1, duration:1})
+    //   .to('.lorem2', { y:-150, opacity: 0, duration: 0.5 }, 1)
+    //   .fromTo('.lorem3', { y:150, opacity: 0, duration: 1 },{y:0, opacity: 1, duration:1})
+    //   .to('.lorem3', { y:-150, opacity: 0, duration: 0.5 }, 1)
 
-    const tl3 = gsap.timeline( { 
-  
-      scrollTrigger: {
-        trigger: "scroll-section3",
-        start: "20%",
-        end: "25%",
-        scrub: true,
-        // markers: true,
-        containerAnimation:pin,
-      }
-      
-    });
-      
-      tl3
-        .fromTo('.lorem3', { y:150, opacity: 0, duration: 1 },{y:0, opacity: 1, duration:1})
-        .to('.lorem3', { y:-150, opacity: 0, duration: 0.5 }, 1)
-
-    // ScrollTrigger.create({
-    //   trigger: ".scroll-section2",
-    //   start: "top top",
-    //   end: "+=400",
-    //   pin: true,
-    // });
-
+    gsap.fromTo(
+      '.lorem2',
+      {
+        y: 150,
+        opacity: 0,
+        duration: 1,
+        ScrollTrigger: {
+          trigger: 'scroll-section-two',
+          start: 'top top',
+          markers: true,
+          pin: true,
+        },
+      },
+      { y: 0, opacity: 1, duration: 1 }
+    )
 
     return () => {
-         pin.kill()
+      {
+        /* A return function for killing the animation on component unmount */
+      }
+      pin.kill()
     }
   }, [])
 
   return (
-    <section
-      className={cx('scroll-section-outer', styles.scroll_section_outer)}
-    >
-      <div ref={triggerRef}>
-        <div
-          ref={sectionRef}
-          className={cx('scroll-section-inner', styles.scroll_section_inner)}
-        >
-          <div className={cx('scroll-section', styles.scroll_section_one)}>
-            <h1 className={cx('lorem', styles.section_one_text)}> Section 1</h1>
-          </div>
-          <div className={cx('scroll-section2', styles.scroll_section_two)}>
-            <Typography
-              className={cx('lorem2', styles.lorem2)}
-              variant="heading-1"
-              alignment="center"
-              component="h1"
-              maxWidth="md"
+    <div>
+      <section
+        className={cx('scroll-section-outer', styles.scroll_section_outer)}
+      >
+        {/* The section up act just as a wrapper. If the trigger (below) is the
+      first jsx element in the component, you get an error on route change */}
+
+        {/* The div below act just as a trigger. As the doc suggests, the trigger and 
+      the animation should alway be two separated refs */}
+        <div ref={triggerRef}>
+          <div
+            ref={sectionRef}
+            className={cx('scroll-section-inner', styles.scroll_section_inner)}
+          >
+            <div className={cx('scroll-section', styles.scroll_section_one)}>
+              <h3>Section 1</h3>
+            </div>
+            <div
+              className={cx('scroll-section-two', styles.scroll_section_two)}
             >
-              discover the world in every cup
-            </Typography>
-          </div>
-          <div className={cx('scroll-section3', styles.scroll_section_three)}>
-            <Typography
-              className={cx('lorem3', styles.lorem3)}
-              variant="heading-3"
-              alignment="center"
-              component="h3"
-              maxWidth="md"
-            >
-              Welcome to Q Tea, the ultimate destination for tea enthusiasts
-              seeking to embark on a journey of taste and culture. Nestled in
-              the heart of Seoul, we offer a unique and luxurious experience,
-              where every sip of our carefully crafted teas represents an
-              imaginary voyage.
-            </Typography>
+              <Typography
+                className={cx('lorem2', styles.lorem2)}
+                variant="heading-1"
+                alignment="center"
+                component="h1"
+                maxWidth="md"
+              >
+                discover the world in every cup
+              </Typography>
+            </div>
+            <div className={cx('scroll-section', styles.scroll_section_three)}>
+              <Typography
+                className={cx('lorem3', styles.lorem3)}
+                variant="heading-3"
+                alignment="center"
+                component="h3"
+                maxWidth="md"
+              >
+                Welcome to Q Tea, the ultimate destination for tea enthusiasts
+                seeking to embark on a journey of taste and culture. Nestled in
+                the heart of Seoul, we offer a unique and luxurious experience,
+                where every sip of our carefully crafted teas represents an
+                imaginary voyage.
+              </Typography>
+            </div>
           </div>
         </div>
-        <div className={cx('scroll-section4', styles.scroll_section_three)}>
-            <Typography
-              className="lorem4"
-              variant="heading-3"
-              alignment="center"
-              component="h1"
-              maxWidth="md"
-            >
-              "Each cup of tea represents an imaginary voyage"
-            </Typography>
+      </section>
+      <section>
+        <div className={styles.vertical_scroll}>
+        <Typography
+                variant="heading-1"
+                alignment="center"
+                component="h1"
+                maxWidth="md"
+              >
+                "Each cup of tea represents an imaginary"
+              </Typography>
         </div>
-      </div>
+      </section>
       
-    </section>
+    </div>
   )
 }
 
