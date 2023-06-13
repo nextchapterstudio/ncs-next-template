@@ -4,7 +4,7 @@
 
 .scroll_section_inner {
   height: 100vh;
-  width: 600vw;
+  width: 300vw;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-color: yellow;
   }
 
   &_two {
@@ -27,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-color: red;
   }
 
   &_three {
@@ -36,15 +38,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-color: blue;
   }
 
   &_four {
-    // background-color: yellow;
+    background-color: black;
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: -100vh;
   }
   &_five {
     // background-color: yellow;
@@ -64,32 +68,10 @@
   }
 }
 
-.section_one_text{
-    font-size: 20vw;
-    color: white;
-}
-.section_two_text{
-    font-size: 20vw;
-    color: white;
-}
-.section_three_text{
-    font-size: 20vw;
-    color: white;
-}
-.section_four_text{
-    font-size: 116px;
-    line-height: 120px;
-    color: white;
-    max-width: 660px;
-    text-align: center;
-}
+// .lorem2{
+//   opacity: 0;
+// }
 
-.section_five_text{
-  font-size: 20vw;
-  color: white;
-}
-
-.section_six_text{
-  font-size: 20vw;
-  color: white;
-}
+// .lorem3{
+//   opacity: 0;
+// }

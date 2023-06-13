@@ -9,21 +9,21 @@ type TypographyProps = WithChildren<{
   className?: string
   variant?:
     | 'heading-1'
-    | 'heading-1-bold'
-    | 'subhead-1'
-    | 'subhead-2'
-    | 'subhead-3'
-    | 'body-1'
-    | 'body-1-bold'
-    | 'body-2'
-    | 'body-2-bold'
-    | 'infographic'
-    | 'infographic-body'
+    | 'heading-2'
+    | 'heading-3'
+    | 'body-text'
   color?: 'acid' | 'navy'
   id?: string
-  maxWidth?: boolean
+  maxWidth?: 
+   | 'lg'
+   | 'md'
+   | 'sm'
   leftMargin?: boolean
   noTopMargin?: boolean
+  alignment?:
+  | 'center'
+  | 'right'
+  | 'left'
 }>
 
 export const Typography = ({
@@ -31,26 +31,29 @@ export const Typography = ({
   className,
   children,
   color,
-  variant = 'body-1',
+  variant = 'body-text',
   id,
   maxWidth,
   leftMargin,
   noTopMargin,
+  alignment,
   ...props
 }: TypographyProps) => {
   const Component = component ? component : 'p'
 
   return (
     <Component
+      // className={styles['heading-1']}
       className={block(
         styles,
         'typography',
         [
           variant,
-          color,
-          leftMargin && 'left-margin',
-          maxWidth && 'max-width',
-          noTopMargin && 'no-top-margin',
+          // color,
+          // leftMargin && 'left-margin',
+          maxWidth,
+          alignment,
+          // noTopMargin && 'no-top-margin',
         ],
         className
       )}

@@ -1,7 +1,12 @@
 :root {
-  --normal-weight: 400;
-  --medium-weight: 500;
-  --semibold-weight: 600;
+  --white: #ffffff;
+
+
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
 }
 
 *,
@@ -10,42 +15,13 @@
   box-sizing: border-box;
 }
 
+
 html,
 body {
   padding: 0;
   margin: auto;
-  font-family: 'indivisible', -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
-  // font-weight: $weight-normal;
-  font-size: 1rem;
-  line-height: 1.4;
-  // max-width: 1594px;
-  background-color: black
+  background-color: black;
+  font-family: var(--Albra-Regular);
+  color: var(--white)
 }
 
-// h1 {
-//   @include h1-styles;
-// }
-
-// h2 {
-//   @include h2-styles;
-// }
-
-// h3 {
-//   @include h3-styles;
-// }
-
-// a {
-//   color: inherit;
-//   text-decoration: none;
-//   font-weight: $weight-medium;
-
-//   &:active {
-//     text-decoration: underline;
-//   }
-// }
-
-// ul {
-//   list-style: none;
-// }

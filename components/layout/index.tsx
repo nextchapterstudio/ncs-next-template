@@ -2,7 +2,7 @@
 // import { Footer } from "../footer";
 import { WithChildren } from '../../types'
 
-export default function Layout({ children }: WithChildren<{}>) {
+export default function Layout({ children}: WithChildren<{}>) {
   return (
     <>
       {/* <Navigation /> */}

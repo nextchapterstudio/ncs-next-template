@@ -1,14 +1,40 @@
 import type { AppProps } from 'next/app'
-import Layout from '../components/layout'
-
+import localFont from 'next/font/local';
 import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const Albra = localFont({ src :[
+  {
+    path:'../styles/fonts/Albra-Regular.woff',
+    weight: '400',
+    style: 'normal',
+  },
+  {
+    path:'../styles/fonts/Albra-Text-Light.woff',
+    weight: '300',
+    style: 'normal',
+  }
+]})
+
+const Albra_Text = localFont({src:[
+  {
+    path:'../styles/fonts/Albra-Text-Regular.woff',
+    weight: '400',
+    style: 'normal',
+  }
+]})
+
+function MyApp({ Component, pageProps }: AppProps) { 
   return (
     <>
-      <Layout>
+      <style jsx global>{`
+        html {
+          --Albra-Regular: ${Albra.style.fontFamily};
+          --Albra-Text: ${Albra_Text.style.fontFamily};
+        }
+      `}</style>
+      <main >
         <Component {...pageProps} />
-      </Layout>
+      </main>
     </>
   )
 }
